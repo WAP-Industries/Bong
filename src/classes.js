@@ -16,9 +16,6 @@ class Sprite{
 
         // this checks if the sprite is an instance of the subclass BallSprite
         if (this instanceof BallSprite){
-            // clamp the ball angle
-            this.Angle = ClampAngle(this.Angle)
-
             // get the ball velocity
             const Velocity = Coord(
                 Math.cos(this.Angle)*this.Speed,
