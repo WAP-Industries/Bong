@@ -1,0 +1,22 @@
+@font-face {
+    font-family: "GameFont";	
+    src: url("font.ttf");
+}
+
+*{
+    background: black;
+    font-family: "GameFont"
+}
+
+.Centered{
+    position: absolute; 
+    margin: auto;
+    top:0;
+    right:0;
+    left: 0;
+    bottom:0;
+}
+
+#Canvas{
+    image-rendering: pixelated;
+}
