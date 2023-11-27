@@ -7,11 +7,15 @@ window.onload = ()=>{
 
     // destructuring assignment to set canvas dimensions
     ;[Canvas.width, Canvas.height] = [window.innerWidth, window.innerHeight];
-
+    
     // making sure the canvas bit width and style width match 
     // otherwise there can be some inaccuracies when rendering stuff
     Container.style.width = Canvas.style.width = Canvas.width+"px"
     Container.style.height = Canvas.style.height = Canvas.height+"px"
+    
+    // setting the canvas background to transparent 
+    // since the score counter divs will be added before it
+    Canvas.style.background = "none"
 
     // setting up the canvas context (used for rendering stuff)
     Context = Canvas.getContext('2d')
@@ -51,7 +55,7 @@ function SetScreen(){
         Div.style.left = `${(Canvas.width/2-parseInt(Div.style.width, 10))/2+i*Canvas.width/2}px`
         Div.style.fontSize = `${parseInt(Div.style.height, 10)*0.8}px`
         Div.innerHTML = Game.Score[i]
-        Container.appendChild(Div)
+        Container.insertBefore(Div, Canvas)
 
         // adding the div to the Game.GUI property for easier score tracking/changing
         Game.GUI.push(Div)
