@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="image.jpg" width=600 height=400 />
+  <img src="image.jpg" width=600 height=300 />
 </p>
 
 pong in javascript  
