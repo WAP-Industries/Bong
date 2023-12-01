@@ -32,8 +32,8 @@ function GameLoop(){
                 // setting the Game.isPlaying flag to false (so the next GameLoop call doesnt update any sprite positions) 
                 Game.isPlaying = false
 
-                // continuing the game after 2000 milliseconds (2 seconds)
-                setTimeout(Init, 2000)
+                // skip to the next iteration of the gameloop and continue the game after 2000 milliseconds (2 seconds)
+                return setTimeout(Init, 2000)
             }
         }
     }
