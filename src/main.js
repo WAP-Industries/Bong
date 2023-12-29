@@ -58,7 +58,7 @@ function GameLoop(){
             // otherwise, return it at 45 degrees
             // the first ternary operator checks if the ball collided at the top, and if it did, reflect the angle
             // the second ternary operator checks which paddle the ball collided with
-            // if it collided with the second one, then at 180 degrees (in radians) to the ball's angle
+            // if it collided with the second one, then add 180 degrees (in radians) to the ball's angle
             else Ball.Angle = (Ball.Position.Y>Middle ? -1:1)*(i[1]==P2 ? 5/4:-1/4)*Math.PI
         }
     }
