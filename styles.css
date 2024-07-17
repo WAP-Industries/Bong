@@ -1,0 +1,30 @@
+/* load the custom font */
+@font-face {
+    font-family: "GameFont";	
+    src: url("font.ttf");
+}
+
+/* the wildcard (*) is used to refer to all html elements */
+*{
+    /* all html elemnts background will be black by default */
+    background: black;
+
+    /* all html elements font will be set to the custom font*/
+    font-family: "GameFont"
+}
+
+.Centered{
+    /* this positions the html element in the centre of the document */
+    position: absolute; 
+    margin: auto;
+    top:0;
+    right:0;
+    left: 0;
+    bottom:0;
+}
+
+#Canvas{
+    /* just makes everything pixelated lol */
+    /* doesnt really do much */
+    image-rendering: pixelated;
+}
